@@ -1,0 +1,5 @@
+# This is to demonstrate how to write an [AOP CastleWindor Interceptor](http://docs.castleproject.org/Windsor.Introduction-to-AOP-With-Castle.ashx), [Akka Dependency Injection Contrib for CastleWindsor](https://github.com/akkadotnet/akka.net/tree/dev/src/contrib/dependencyInjection/Akka.DI.CastleWindsor) and [akka-monitoring](https://github.com/Aaronontheweb/akka-monitoring) to make monitoring your Akka Actors simple.   #
+
+Aaron Stannard wrote a really nice extension to monitor an Akka.net Actor system. Currently he supports  right out of the box but you can easily add your own. I suggest that you check out his project for more details. 
+
+When an Actor goes through its life cycle you have to notify the monitor using an array of extension methods. This approach requires that the programmer to write code for several different contexts like when during Actor PreStart. This is repetitive code that could be replaced using AOP. In my sample I wrote a very basic Interceptor and Console monitor to demonstrate the possibilities.

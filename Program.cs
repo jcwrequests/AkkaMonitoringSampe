@@ -22,7 +22,7 @@ namespace Akka.AOP.Monitoring
         
         static void Main(string[] args)
         {
-       
+         
            using (system = ActorSystem.Create("akka-performance-demo"))
             {
                 var registeredMonitor = ActorMonitoringExtension.RegisterMonitor(system, new Monitor());
